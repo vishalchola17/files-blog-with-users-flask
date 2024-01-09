@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 from forms import CreatePostForm, Register, Login, CommentForm
 import os
 
-os.environ["FLASK"] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
+
 '''
 Make sure the required packages are installed: 
 Open the Terminal in PyCharm (bottom left). 
@@ -27,8 +27,8 @@ This will install the packages from the requirements.txt for this project.
 '''
 
 app = Flask(__name__)
-#app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'D
-app.config['SECRET_KEY'] = os.environ.get("FLASK")
+
+app.config['SECRET_KEY'] = "myblogwebsite"
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
